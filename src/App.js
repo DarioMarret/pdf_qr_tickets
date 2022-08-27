@@ -51,11 +51,11 @@ function App() {
               <table width="617" border="0" cellspacing="15" cellpadding="0">
                 <tbody>
                   <tr align="justify">
-                    <td width="587">
+                    <td width="100%">
                       <p>NOMBRE </p>
                       {
-                        useData.valorpagado === "CORTESIA - PROHIBIDA SU VENTA" ?
-                        <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre+"-"+useData.observacion : "N/A"}</strong></p>
+                        useData.valorpagado === "0" ?
+                        <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre+" / "+useData.observacion : "N/A"}</strong></p>
                         : <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
                       }
 
@@ -67,7 +67,7 @@ function App() {
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>CATEGORIA</p>
                       {
-                        useData.valorpagado === "CORTESIA - PROHIBIDA SU VENTA" ?
+                        useData.valorpagado === "0" ?
                          <p style={{ marginTop: "-20px" }}><strong>{useData.categoriac != null ? useData.categoriac : "N/A"}</strong></p>
                         : <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
                       }
