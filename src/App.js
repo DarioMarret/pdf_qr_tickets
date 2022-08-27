@@ -22,7 +22,7 @@ function App() {
     valorpagado: null,
     formadepago: null,
     transaccion: null,
-    urlindex: null,
+    index: null,
     barracategoria: null,
   });
 
@@ -36,7 +36,7 @@ function App() {
         <tbody>
           <tr>
             <td>
-              <img src={useData.urlindex !== "" && useData.urlindex != null ? useData.urlindex : "https://codigomarret.online/img/encabezado.jpeg"} width="616" height="165" alt="" />
+              <img src={useData.index !== "" && useData.index != null ? useData.index : "https://codigomarret.online/img/encabezado.jpeg"} width="616" height="165" alt="" />
             </td>
           </tr>
           <tr>
