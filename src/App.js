@@ -145,7 +145,7 @@ function App() {
                 <tbody>
                   <tr>
                     <td width="617"><strong>PARA CANJEAR BOLETO DURO</strong>
-                      <ul style={{ listStyle: "none", padding: 0 }}>
+                      <ul style={{ listStyle: "none", padding: 0, fontSize:"12px" }}>
                         <li><span><img src="https://codigomarret.online/img/comprobado.png" height="15px" alt="" /></span> Presentar este documento
                           impreso</li>
                         <li><span><img src="https://codigomarret.online/img/comprobado.png" height="15px" alt="" /></span> Copia de cédula del titular del
@@ -155,7 +155,7 @@ function App() {
                   </tr>
                   <tr>
                     <td width="587"><strong>PROHIBIDO</strong>
-                      <ul style={{ listStyle: "none", padding: 0 }}>
+                      <ul style={{ listStyle: "none", padding: 0, fontSize:"12px" }}>
                         <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de bebidas alcohólicas
                         </li>
                         <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de armas blancas y de fuego</li>
@@ -166,7 +166,7 @@ function App() {
                     </td>
 
                     <td width="587"><strong>NORMAS DE BIOSEGURIDAD</strong>
-                      <ul style={{ listStyle: "none", padding: 0 }}>
+                      <ul style={{ listStyle: "none", padding: 0, fontSize:"12px" }}>
                         <li><span><img src="https://codigomarret.online/img/mascarilla.png" height="15px" alt="" /></span> Utilice mascarilla</li>
                         <li><span><img src="https://codigomarret.online/img/distanciamiento-social.png" height="15px" alt="" /></span> Distanciamento de
                           1.5m</li>
