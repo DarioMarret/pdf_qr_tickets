@@ -62,7 +62,7 @@ function App() {
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>HORA</p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.actual != null ? useData.actual : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-10px" }}><strong>{useData.horashows != null ? useData.horashows : "N/A"}</strong></p>
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>ASIENTO</p>
@@ -73,7 +73,7 @@ function App() {
                   <tr style={{ align: "center" }}>
                     <td align="left">
                       <p>LUGAR</p>
-                      <p style={{ marginTop: "-10px" }}><strong>RECINTO FERIAL, DURAN</strong></p>
+                      <p style={{ marginTop: "-10px" }}><strong>{useData.lugar != null ? useData.lugar : "N/A"}</strong></p>
                       <p>FECHA</p>
                       <p style={{ marginTop: "-10px" }}><strong>{useData.fecha != null ? useData.fecha : "N/A"}</strong></p>
                     </td>
