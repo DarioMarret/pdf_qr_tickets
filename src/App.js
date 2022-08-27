@@ -28,9 +28,7 @@ function App() {
 
   useEffect(() => {
     console.log(window.location);
-    console.log(window.location.search);
-    console.log(decode(window.location.search));
-    // setData(JSON.parse(decode(window.location.search)))
+    setData(JSON.parse(decode(window.location.pathname.split('/pdf/')[1])))
   }, []);
   return (
     <div className="App">
