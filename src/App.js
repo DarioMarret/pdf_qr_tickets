@@ -28,7 +28,9 @@ function App() {
 
   useEffect(() => {
     console.log(window.location);
-    setData(JSON.parse(decode(window.location.pathname.split('/pdf/')[1])))
+    if (window.location.pathname.split('/pdf/')[1]) {
+      setData(JSON.parse(decode(window.location.pathname.split('/pdf/')[1])))
+    }
   }, []);
   return (
     <div className="App">
@@ -40,6 +42,8 @@ function App() {
             </td>
           </tr>
           <tr>
+          <p>Vendedor:  <strong>{useData.vendedor != null ? useData.vendedor : "N/A"}</strong></p>
+                      
             <td height="5">&nbsp;</td>
           </tr>
           <tr>
@@ -101,7 +105,7 @@ function App() {
 
               {/* TRIBUNA */}
               {
-                useData.barracategoria !== "TRIBUNA" ? (
+                useData.barracategoria === "TRIBUNA" ? (
                   <div style={{ width: "100%", padding: "15px", height: "5%" }}>
                     <img src="https://codigomarret.online/img/tribuna.png" alt="all" width="100%" />
                   </div>
@@ -110,11 +114,11 @@ function App() {
 
               {/* PALCO */}
               {
-                 useData.barracategoria === "PALCO" ? (
-                <div style={{ width: "100%", padding: "15px", height: "5%" }}>
-                  <img src="https://codigomarret.online/img/palco.png" alt="all" width="100%" />
-                </div>
-              ) : ""
+                useData.barracategoria === "PALCO" ? (
+                  <div style={{ width: "100%", padding: "15px", height: "5%" }}>
+                    <img src="https://codigomarret.online/img/palco.png" alt="all" width="100%" />
+                  </div>
+                ) : ""
               }
               {/* CANCHA */}
               {
@@ -128,14 +132,11 @@ function App() {
               {
                 useData.barracategoria === "" ? (
                   <div style={{ width: "100%", padding: "15px", height: "5%" }}>
-                     <img src="https://codigomarret.online/img/sin.png" alt="all" width="100%" />
+                    <img src="https://codigomarret.online/img/sin.png" alt="all" width="100%" />
                   </div>
                 ) : ""
               }
             </td>
-
-
-
 
           </tr>
 
@@ -162,8 +163,7 @@ function App() {
                       <ul style={{ listStyle: "none", padding: 0 }}>
                         <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de bebidas alcohólicas
                         </li>
-                        <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de armas blancas y de
-                          fuego</li>
+                        <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de armas blancas y de fuego</li>
                         <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de alimentos perecibles
                         </li>
                         <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de mascotas</li>
@@ -181,9 +181,6 @@ function App() {
                         </li>
                       </ul>
                     </td>
-                  </tr>
-                  <tr>
-                    <td>&nbsp;</td>
                   </tr>
                 </tbody>
               </table>
