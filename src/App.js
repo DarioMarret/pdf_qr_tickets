@@ -125,7 +125,7 @@ function App() {
               }
 
               {
-                useData.barracategoria !== "" ? (
+                useData.barracategoria === "" ? (
                   <div style={{ width: "100%", padding: "0px" }}>
                     <img src="https://codigomarret.online/img/sin.png" alt="all" width="100%" />
                   </div>
