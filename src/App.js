@@ -42,9 +42,7 @@ function App() {
             </td>
           </tr>
           <tr>
-          <p>Vendedor:  <strong>{useData.vendedor != null ? useData.vendedor : "N/A"}</strong></p>
-                      
-            <td height="5">&nbsp;</td>
+            <p>VENDEDOR:  <strong>{useData.vendedor != null ? useData.vendedor : "N/A"}</strong></p>
           </tr>
           <tr>
             <td>
@@ -53,40 +51,37 @@ function App() {
                   <tr align="justify">
                     <td width="587">
                       <p>NOMBRE </p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
 
                       <p>IDENTIFICACION </p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.cedula != null ? useData.cedula : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong>{useData.cedula != null ? useData.cedula : "N/A"}</strong></p>
                     </td>
                   </tr>
                   <tr style={{ align: "justify" }}>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>CATEGORIA</p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>HORA</p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.horashows != null ? useData.horashows : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong>{useData.horashows != null ? useData.horashows : "N/A"}</strong></p>
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>ASIENTO</p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.asiento != null ? useData.asiento : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong>{useData.asiento != null ? useData.asiento : "N/A"}</strong></p>
                     </th>
                   </tr>
 
                   <tr style={{ align: "center" }}>
                     <td align="left">
                       <p>LUGAR</p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.lugar != null ? useData.lugar : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong>{useData.lugar != null ? useData.lugar : "N/A"}</strong></p>
                       <p>FECHA</p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.fecha != null ? useData.fecha : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong>{useData.fecha != null ? useData.fecha : "N/A"}</strong></p>
                     </td>
+                    <td></td>
                     <td style={{ align: "center" }}>
-                      <ol>
-                        <li>
-                          <QRCode value={`${useData.nombre}-${useData.cedula}-${useData.celular}-${useData.protocol}-${useData.actual}`} />
-                        </li>
-                      </ol>
+                        <QRCode value={`${useData.nombre}-${useData.cedula}-${useData.celular}-${useData.protocol}-${useData.actual}`} />
                     </td>
                   </tr>
 
@@ -97,7 +92,7 @@ function App() {
               {
 
                 useData.barracategoria === "GENERAL" ? (
-                  <div style={{ width: "100%", padding: "15px", height: "5%" }}>
+                  <div style={{ width: "100%", padding: "0px" }}>
                     <img src="https://codigomarret.online/img/general.png" alt="all" width="100%" />
                   </div>
                 ) : ""
@@ -106,7 +101,7 @@ function App() {
               {/* TRIBUNA */}
               {
                 useData.barracategoria === "TRIBUNA" ? (
-                  <div style={{ width: "100%", padding: "15px", height: "5%" }}>
+                  <div style={{ width: "100%", padding: "0px" }}>
                     <img src="https://codigomarret.online/img/tribuna.png" alt="all" width="100%" />
                   </div>
                 ) : ""
@@ -115,7 +110,7 @@ function App() {
               {/* PALCO */}
               {
                 useData.barracategoria === "PALCO" ? (
-                  <div style={{ width: "100%", padding: "15px", height: "5%" }}>
+                  <div style={{ width: "100%", padding: "0px" }}>
                     <img src="https://codigomarret.online/img/palco.png" alt="all" width="100%" />
                   </div>
                 ) : ""
@@ -123,15 +118,15 @@ function App() {
               {/* CANCHA */}
               {
                 useData.barracategoria === "CANCHA" ? (
-                  <div style={{ width: "100%", padding: "15px", height: "5%" }}>
+                  <div style={{ width: "100%", padding: "0px" }}>
                     <img src="https://codigomarret.online/img/cancha.png" alt="all" width="100%" />
                   </div>
                 ) : ""
               }
 
               {
-                useData.barracategoria === "" ? (
-                  <div style={{ width: "100%", padding: "15px", height: "5%" }}>
+                useData.barracategoria !== "" ? (
+                  <div style={{ width: "100%", padding: "0px" }}>
                     <img src="https://codigomarret.online/img/sin.png" alt="all" width="100%" />
                   </div>
                 ) : ""
