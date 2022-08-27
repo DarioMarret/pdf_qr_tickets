@@ -67,7 +67,7 @@ function App() {
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>CATEGORIA</p>
                       {
-                        useData.categoriac === "CORTESIA - PROHIBIDA SU VENTA" ?
+                        useData.valorpagado === "CORTESIA - PROHIBIDA SU VENTA" ?
                          <p style={{ marginTop: "-20px" }}><strong>{useData.categoriac != null ? useData.categoriac : "N/A"}</strong></p>
                         : <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
                       }
