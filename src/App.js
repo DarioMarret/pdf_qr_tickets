@@ -58,7 +58,7 @@ function App() {
                   <tr style={{ align: "justify" }}>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>CATEGORIA</p>
-                      <p style={{ marginTop: "-10px" }}><strong>{useData.barracategoria != null ? useData.barracategoria : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-10px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>HORA</p>
