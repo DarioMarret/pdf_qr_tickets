@@ -55,7 +55,7 @@ function App() {
                       <p>NOMBRE </p>
                       {
                         useData.valorpagado === "CORTESIA - PROHIBIDA SU VENTA" ?
-                        <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? `${useData.nombre}- ${useData.observacion}` : "N/A"}</strong></p>
+                        <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre+"-"+useData.observacion : "N/A"}</strong></p>
                         : <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
                       }
 
