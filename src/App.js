@@ -27,6 +27,8 @@ function App() {
   });
 
   useEffect(() => {
+    console.log(window.location.search);
+    console.log(decode(window.location.search));
     // setData(JSON.parse(decode(window.location.search)))
   }, []);
   return (
