@@ -24,6 +24,8 @@ function App() {
     transaccion: null,
     index: null,
     barracategoria: null,
+    observacion: null,
+    categoriac: null,
   });
 
   useEffect(() => {
@@ -51,7 +53,11 @@ function App() {
                   <tr align="justify">
                     <td width="587">
                       <p>NOMBRE </p>
-                      <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
+                      {
+                        useData.valorpagado === "CORTESIA - PROHIBIDA SU VENTA" ?
+                        <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? `${useData.nombre}- ${useData.observacion}` : "N/A"}</strong></p>
+                        : <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
+                      }
 
                       <p>IDENTIFICACION </p>
                       <p style={{ marginTop: "-20px" }}><strong>{useData.cedula != null ? useData.cedula : "N/A"}</strong></p>
@@ -60,7 +66,11 @@ function App() {
                   <tr style={{ align: "justify" }}>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>CATEGORIA</p>
-                      <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
+                      {
+                        useData.categoriac === "CORTESIA - PROHIBIDA SU VENTA" ?
+                         <p style={{ marginTop: "-20px" }}><strong>{useData.categoriac != null ? useData.categoriac : "N/A"}</strong></p>
+                        : <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
+                      }
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>HORA</p>
@@ -92,7 +102,7 @@ function App() {
               {
 
                 useData.barracategoria === "GENERAL" ? (
-                  <div style={{ width: "100%", padding: "0px" }}>
+                  <div style={{ width: "100%", paddingBottom: "5px" }}>
                     <img src="https://codigomarret.online/img/general.png" alt="all" width="100%" />
                   </div>
                 ) : ""
@@ -101,7 +111,7 @@ function App() {
               {/* TRIBUNA */}
               {
                 useData.barracategoria === "TRIBUNA" ? (
-                  <div style={{ width: "100%", padding: "0px" }}>
+                  <div style={{ width: "100%", paddingBottom: "5px" }}>
                     <img src="https://codigomarret.online/img/tribuna.png" alt="all" width="100%" />
                   </div>
                 ) : ""
@@ -110,7 +120,7 @@ function App() {
               {/* PALCO */}
               {
                 useData.barracategoria === "PALCO" ? (
-                  <div style={{ width: "100%", padding: "0px" }}>
+                  <div style={{ width: "100%", paddingBottom: "5px" }}>
                     <img src="https://codigomarret.online/img/palco.png" alt="all" width="100%" />
                   </div>
                 ) : ""
@@ -118,25 +128,21 @@ function App() {
               {/* CANCHA */}
               {
                 useData.barracategoria === "CANCHA" ? (
-                  <div style={{ width: "100%", padding: "0px" }}>
+                  <div style={{ width: "100%", paddingBottom: "5px" }}>
                     <img src="https://codigomarret.online/img/cancha.png" alt="all" width="100%" />
                   </div>
                 ) : ""
               }
 
               {
-                useData.barracategoria === "" ? (
-                  <div style={{ width: "100%", padding: "0px" }}>
+                useData.barracategoria === "{{BCATEGORIA}}" ? (
+                  <div style={{ width: "100%", paddingBottom: "5px" }}>
                     <img src="https://codigomarret.online/img/sin.png" alt="all" width="100%" />
                   </div>
                 ) : ""
               }
             </td>
 
-          </tr>
-
-          <tr>
-            <td height="10">&nbsp;</td>
           </tr>
 
           <tr>
