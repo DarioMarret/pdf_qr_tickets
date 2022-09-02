@@ -22,14 +22,14 @@ function App() {
     valorpagado: null,
     formadepago: null,
     transaccion: null,
-    index: null,
+    urlindex: null,
     barracategoria: null,
     observacion: null,
     categoriac: null,
+    nombreconcert: null,
   });
 
   useEffect(() => {
-    console.log(window.location);
     if (window.location.pathname.split('/pdf/')[1]) {
       setData(JSON.parse(decode(window.location.pathname.split('/pdf/')[1])))
     }
@@ -40,11 +40,12 @@ function App() {
         <tbody>
           <tr>
             <td>
-              <img src={useData.index !== "" && useData.index != null ? useData.index : "https://codigomarret.online/img/encabezado.jpeg"} width="616" height="165" alt="" />
+              <img src={useData.urlindex !== "" && useData.urlindex != null ? useData.urlindex : "https://codigomarret.online/img/encabezado.jpeg"} width="616" height="165" alt="" />
             </td>
           </tr>
           <tr>
             <p>VENDEDOR:  <strong>{useData.vendedor != null ? useData.vendedor : "N/A"}</strong></p>
+            <p>HORA DE EMISION:  <strong>{useData.actual != null ? useData.actual : "N/A"}</strong></p>
           </tr>
           <tr>
             <td>
@@ -55,8 +56,8 @@ function App() {
                       <p>NOMBRE </p>
                       {
                         useData.valorpagado === "0" ?
-                        <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre+" / "+useData.observacion : "N/A"}</strong></p>
-                        : <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
+                          <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre + " / " + useData.observacion : "N/A"}</strong></p>
+                          : <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
                       }
 
                       <p>IDENTIFICACION </p>
@@ -68,8 +69,8 @@ function App() {
                       <p style={{ fontWeight: "normal" }}>CATEGORIA</p>
                       {
                         useData.valorpagado === "0" ?
-                         <p style={{ marginTop: "-20px" }}><strong>{useData.categoriac != null ? useData.categoriac : "N/A"}</strong></p>
-                        : <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
+                          <p style={{ marginTop: "-20px" }}><strong>{useData.categoriac != null ? useData.categoriac : "N/A"}</strong></p>
+                          : <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
                       }
                     </th>
                     <th style={{ width: "150px" }}>
@@ -91,7 +92,7 @@ function App() {
                     </td>
                     <td></td>
                     <td style={{ align: "center" }}>
-                        <QRCode value={`${useData.nombre}-${useData.cedula}-${useData.celular}-${useData.protocol}-${useData.actual}`} />
+                      <QRCode value={`${useData.nombre}-${useData.cedula}-${useData.celular}-${useData.protocol}-${useData.actual}`} />
                     </td>
                   </tr>
 
@@ -151,7 +152,7 @@ function App() {
                 <tbody>
                   <tr>
                     <td width="617"><strong>PARA CANJEAR BOLETO DURO</strong>
-                      <ul style={{ listStyle: "none", padding: 0, fontSize:"12px" }}>
+                      <ul style={{ listStyle: "none", padding: 0, fontSize: "12px" }}>
                         <li><span><img src="https://codigomarret.online/img/comprobado.png" height="15px" alt="" /></span> Presentar este documento
                           impreso</li>
                         <li><span><img src="https://codigomarret.online/img/comprobado.png" height="15px" alt="" /></span> Copia de cédula del titular del
@@ -161,7 +162,7 @@ function App() {
                   </tr>
                   <tr>
                     <td width="587"><strong>PROHIBIDO</strong>
-                      <ul style={{ listStyle: "none", padding: 0, fontSize:"12px" }}>
+                      <ul style={{ listStyle: "none", padding: 0, fontSize: "12px" }}>
                         <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de bebidas alcohólicas
                         </li>
                         <li><span><img src="https://codigomarret.online/img/prohibido.png" height="15px" alt="" /></span> Ingreso de armas blancas y de fuego</li>
@@ -172,7 +173,7 @@ function App() {
                     </td>
 
                     <td width="587"><strong>NORMAS DE BIOSEGURIDAD</strong>
-                      <ul style={{ listStyle: "none", padding: 0, fontSize:"12px" }}>
+                      <ul style={{ listStyle: "none", padding: 0, fontSize: "12px" }}>
                         <li><span><img src="https://codigomarret.online/img/mascarilla.png" height="15px" alt="" /></span> Utilice mascarilla</li>
                         <li><span><img src="https://codigomarret.online/img/distanciamiento-social.png" height="15px" alt="" /></span> Distanciamento de
                           1.5m</li>
