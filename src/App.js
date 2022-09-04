@@ -43,10 +43,35 @@ function App() {
               <img src={useData.urlindex !== "" && useData.urlindex != null ? useData.urlindex : "https://codigomarret.online/img/encabezado.jpeg"} width="616" height="165" alt="" />
             </td>
           </tr>
-          <tr>
-            <p>VENDEDOR:  <strong>{useData.vendedor != null ? useData.vendedor : "N/A"}</strong></p>
-            <p>HORA DE EMISION:  <strong>{useData.actual != null ? useData.actual : "N/A"}</strong></p>
-          </tr>
+          <dv style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            marginLeft: 15,
+            wrap: 10
+          }}>
+            <p
+              style={{
+                fontSize: 12,
+                marginRight: 10,
+              }}
+            >VENDEDOR:  <strong
+              style={{
+                fontSize: 12,
+              }}
+            >{useData.vendedor != null ? useData.vendedor : "N/A"}</strong></p>
+            <p
+              style={{
+                fontSize: 12,
+                marginRight: 10,
+              }}
+            >HORA DE EMISION:  <strong
+              style={{
+                fontSize: 12,
+              }}
+            >{useData.actual != null ? useData.actual : "N/A"}</strong></p>
+          </dv>
           <tr>
             <td>
               <table width="617" border="0" cellspacing="15" cellpadding="0">
@@ -56,12 +81,24 @@ function App() {
                       <p>NOMBRE </p>
                       {
                         useData.valorpagado === "0" ?
-                          <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre + " / " + useData.observacion : "N/A"}</strong></p>
-                          : <p style={{ marginTop: "-20px" }}><strong>{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
+                          <p style={{ marginTop: "-20px" }}><strong
+                            style={{
+                              fontSize: 12,
+                            }}
+                          >{useData.nombre != null ? useData.nombre + " / " + useData.observacion : "N/A"}</strong></p>
+                          : <p style={{ marginTop: "-20px" }}><strong
+                            style={{
+                              fontSize: 12,
+                            }}
+                          >{useData.nombre != null ? useData.nombre : "N/A"}</strong></p>
                       }
 
                       <p>IDENTIFICACION </p>
-                      <p style={{ marginTop: "-20px" }}><strong>{useData.cedula != null ? useData.cedula : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong
+                        style={{
+                          fontSize: 12,
+                        }}
+                      >{useData.cedula != null ? useData.cedula : "N/A"}</strong></p>
                     </td>
                   </tr>
                   <tr style={{ align: "justify" }}>
@@ -69,17 +106,33 @@ function App() {
                       <p style={{ fontWeight: "normal" }}>CATEGORIA</p>
                       {
                         useData.valorpagado === "0" ?
-                          <p style={{ marginTop: "-20px" }}><strong>{useData.categoriac != null ? useData.categoriac : "N/A"}</strong></p>
-                          : <p style={{ marginTop: "-20px" }}><strong>{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
+                          <p style={{ marginTop: "-20px" }}><strong
+                            style={{
+                              fontSize: 12,
+                            }}
+                          >{useData.categoriac != null ? useData.categoriac : "N/A"}</strong></p>
+                          : <p style={{ marginTop: "-20px" }}><strong
+                            style={{
+                              fontSize: 12,
+                            }}
+                          >{useData.categoria != null ? useData.categoria : "N/A"}</strong></p>
                       }
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>HORA</p>
-                      <p style={{ marginTop: "-20px" }}><strong>{useData.horashows != null ? useData.horashows : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong
+                        style={{
+                          fontSize: 12,
+                        }}
+                      >{useData.horashows != null ? useData.horashows : "N/A"}</strong></p>
                     </th>
                     <th style={{ width: "150px" }}>
                       <p style={{ fontWeight: "normal" }}>ASIENTO</p>
-                      <p style={{ marginTop: "-20px" }}><strong>{useData.asiento != null ? useData.asiento : "N/A"}</strong></p>
+                      <p style={{ marginTop: "-20px" }}><strong
+                        style={{
+                          fontSize: 12,
+                        }}
+                      >{useData.asiento != null ? useData.asiento : "N/A"}</strong></p>
                     </th>
                   </tr>
 
